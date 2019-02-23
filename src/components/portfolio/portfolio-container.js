@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 import PortfolioItem from './portfolio-item';
 
@@ -20,6 +21,8 @@ export default class PortfolioContainer extends Component {
 
         // this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
         this.handleFilter = this.handleFilter.bind(this);
+        this.getPortfolioItems = this.getPortfolioItems.bind(this);
+
     }
 
     handleFilter(filter) {
@@ -27,8 +30,20 @@ export default class PortfolioContainer extends Component {
             data: this.state.data.filter(item => {
                 return item.category === filter
             })
-        })
+        });
     }
+
+    getPortfolioItems() {
+        axios
+            .get("https://taniadangelo.devcamp.space/portfolio/portfolio_items")
+            .then(response => {
+                console.log("response data", response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+    
 
     portfolioItems() {
         
@@ -48,6 +63,9 @@ export default class PortfolioContainer extends Component {
         if (this.state.isLoading) {
             return <div>Loading...</div>
         }
+
+        this.getPortfolioItems();
+
         return (
             <div>
                 <h2>{this.state.pageTitle}</h2>
