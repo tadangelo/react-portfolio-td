@@ -15,17 +15,18 @@ export default class App extends Component {
     return (
       <div className="container">
         <Router>
-        <div>
-          <NavigationContainer />
-          <Switch>
-            <Route exact path="/" component={ Home } />
-            <Route path="/about" component={ About } />
-            <Route path="/contact" component={ Contact } />
-            <Route path="/blog" component={ Blog } />
-            <Route exact path="/portfolio/:slug" component={ PortfolioDetail } />
-            <Route component={ NoMatch } />
-          </Switch>
-        </div>
+          <div>
+            <NavigationContainer />
+            
+            <Switch>
+              <Route exact path="/" component={ Home } />
+              <Route path="/about" component={ About } />
+              <Route path="/contact" component={ Contact } />
+              <Route path="/blog" component={ Blog } />
+              <Route exact path="/portfolio/:slug" component={ PortfolioDetail } />
+              <Route component={ NoMatch } />
+            </Switch>
+          </div>
         </Router>
       </div>
     );
