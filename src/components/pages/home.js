@@ -5,7 +5,6 @@ import PortfolioContainer from "../portfolio/portfolio-container"
 export default function() {
     return (
         <div>
-            <hr />
             <div className="top-section">
                 <h1>top-section</h1>
                 <br />
