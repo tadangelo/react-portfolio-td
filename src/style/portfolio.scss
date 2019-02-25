@@ -32,16 +32,23 @@
                 transition: 1s ease-in-out;
                 color: transparent;
             }
+
+            .title{
+                width:50%;
+                margin-bottom: 10px;
+                transition: 1s ease-in-out;
+                color: transparent;
+            }
         }
 
         .img-text-wrapper:hover .subtitle {
-            color: $teal;
+            color: $offwhite;
             font-weight: 500;
         }
 
-        .logo-wrapper img {
-            width:50%;
-            margin-bottom: 20px;
+        .img-text-wrapper:hover .title {
+            color: lightpink;
+            font-weight: 700;
         }
     }
 }
@@ -49,5 +56,5 @@
 
 .image-blur {
     transition: 1s;
-    filter: brightness(10%);
+    filter: brightness(15%);
 }
