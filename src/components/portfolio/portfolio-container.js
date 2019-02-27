@@ -71,7 +71,7 @@ export default class PortfolioContainer extends Component {
                     Personal Project
                 </button>       
                    
-                {this.portfolioItems(id=1)}
+                {this.portfolioItems()}
             </div>
 
         );
