@@ -7,7 +7,7 @@ export default function() {
     return (
         <div>
             <div className="top-section">
-                <h1>top-section</h1>
+                {/* <img src=""></img> */}
                 <br />
             </div>
 
